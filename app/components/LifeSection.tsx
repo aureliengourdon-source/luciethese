@@ -14,7 +14,7 @@ const anecdotes = [
   {
     icon: "🍝",
     title: "La coloc et les 500 g de semoule",
-    text: "Un soir à 23h, la colocataire de Lucie lui apporte fièrement 500 grammes de semoule sèche — comme s'il s'agissait d'un vrai repas. Un moment de pure complicité interculturelle, quelque part entre la solidarité et l'incompréhension culinaire.",
+    text: "Vendredi 23h, Lucie rentre d'une soirée, ventre plein de ses pâtes au pesto. Sa coloc débarque en cuisine, rayonnante, et lui propose devant tous les colocs brésiliens réunis de goûter son « super couscous dont elle est hyper fière ». Verdict : 500g de semoule sèche, seule. Sous le regard de toute la tablée, Lucie n'a pas eu le cœur de décevoir. 45 minutes plus tard, c'était fini.",
   },
   {
     icon: "⚽",
