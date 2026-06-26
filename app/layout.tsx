@@ -15,8 +15,32 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://these-lucie.vercel.app"),
   title: "Lucie Gourdon — Thèse",
-  description: "La thèse de Lucie Gourdon sur le stockage du carbone dans les écosystèmes de mangrove au Brésil.",
+  description:
+    "Lucie Gourdon, doctorante Sorbonne × USP São Paulo, étudie comment le carbone se stocke pour des millénaires dans les mangroves brésiliennes.",
+  openGraph: {
+    title: "La thèse de Lucie — Carbone bleu & mangroves brésiliennes",
+    description:
+      "Lucie Gourdon, doctorante Sorbonne × USP São Paulo, étudie comment le carbone se stocke pour des millénaires dans les mangroves brésiliennes.",
+    images: [
+      {
+        url: "/Lucie Mangroves Brésilienne.jpeg",
+        width: 1200,
+        height: 800,
+        alt: "Lucie dans les mangroves brésiliennes",
+      },
+    ],
+    type: "website",
+    locale: "fr_FR",
+    siteName: "La thèse de Lucie",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "La thèse de Lucie — Carbone bleu & mangroves brésiliennes",
+    description: "Lucie Gourdon, doctorante Sorbonne × USP São Paulo.",
+    images: ["/Lucie Mangroves Brésilienne.jpeg"],
+  },
 }
 
 export default function RootLayout({

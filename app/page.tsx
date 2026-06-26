@@ -7,6 +7,7 @@ import FieldWork from "@/app/components/FieldWork"
 import PostersSection from "@/app/components/PostersSection"
 import LifeSection from "@/app/components/LifeSection"
 import AnimatedSection from "@/app/components/AnimatedSection"
+import Footer from "@/app/components/Footer"
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <AnimatedSection>
         <LifeSection />
       </AnimatedSection>
+      <Footer />
     </main>
   )
 }

@@ -21,6 +21,17 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes marker-pulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50%       { opacity: 0.15; transform: scale(2.4); }
+}
+
+.map-marker-pulse {
+  animation: marker-pulse 2.4s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
 body {
   background-color: oklch(0.97 0.012 85);
   color: oklch(0.14 0.010 260);

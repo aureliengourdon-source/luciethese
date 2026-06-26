@@ -1,6 +1,7 @@
 'use client'
 
-import { useState } from "react"
+import { useState, useRef } from "react"
+import { motion, useInView } from "framer-motion"
 import {
   ComposableMap,
   Geographies,
@@ -59,10 +60,13 @@ function countryColor(name: string): string {
 
 export default function WorldMap() {
   const [tooltip, setTooltip] = useState<string | null>(null)
+  const sectionRef = useRef<HTMLElement>(null)
+  const inView = useInView(sectionRef, { once: true, margin: "-100px" })
 
   return (
     <section
       id="carte"
+      ref={sectionRef}
       className="bg-ocean w-full py-20 px-4"
       style={{ color: "white" }}
     >
@@ -83,7 +87,12 @@ export default function WorldMap() {
       </div>
 
       {/* Map */}
-      <div className="max-w-4xl mx-auto w-full relative">
+      <motion.div
+        className="max-w-4xl mx-auto w-full relative"
+        initial={{ opacity: 0, y: 20 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+      >
         <ComposableMap
           projectionConfig={{ scale: 140, center: [-20, 10] }}
           width={800}
@@ -145,6 +154,12 @@ export default function WorldMap() {
               onMouseLeave={() => setTooltip(null)}
               onClick={() => setTooltip((prev) => (prev === loc.name ? null : loc.name))}
             >
+              {/* Pulse ring */}
+              <circle
+                r={8}
+                fill={loc.type === "france" ? "#52b788" : "#74c69d"}
+                className="map-marker-pulse"
+              />
               {/* Outer glow ring */}
               <circle
                 r={tooltip === loc.name ? 9 : 7}
@@ -196,7 +211,7 @@ export default function WorldMap() {
             {locations.find((l) => l.name === tooltip)?.label}
           </div>
         )}
-      </div>
+      </motion.div>
 
       {/* Location cards */}
       <div className="max-w-4xl mx-auto mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 px-2">
