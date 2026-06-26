@@ -143,6 +143,7 @@ export default function WorldMap() {
               coordinates={loc.coordinates}
               onMouseEnter={() => setTooltip(loc.name)}
               onMouseLeave={() => setTooltip(null)}
+              onClick={() => setTooltip((prev) => (prev === loc.name ? null : loc.name))}
             >
               {/* Outer glow ring */}
               <circle

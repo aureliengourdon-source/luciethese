@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-mangrove/95 via-mangrove/50 to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto w-full px-6 pb-36">
+      <div className="relative z-10 max-w-5xl mx-auto w-full px-6 pb-24 sm:pb-36">
         <motion.div
           initial={{ opacity: 0, y: 48 }}
           animate={{ opacity: 1, y: 0 }}
@@ -35,7 +35,7 @@ export default function Hero() {
 
           {/* Title */}
           <h1
-            className="font-serif text-white text-6xl sm:text-7xl lg:text-8xl font-bold leading-[1.05]"
+            className="font-serif text-white text-5xl sm:text-7xl lg:text-8xl font-bold leading-[1.05]"
             style={{ letterSpacing: '-0.03em' }}
           >
             La thèse<br />de Lucie

@@ -68,16 +68,14 @@ export default function ThesisSection() {
           >
             Les grandes étapes
           </h3>
-          <div className="relative flex flex-col gap-8 sm:flex-row sm:items-start sm:gap-0">
-            {/* Horizontal line — visible on desktop */}
-            <div className="absolute top-5 hidden h-px w-full bg-leaf/30 sm:block" />
-
+          {/* Desktop timeline */}
+          <div className="relative hidden sm:flex sm:items-start">
+            <div className="absolute top-5 h-px w-full bg-leaf/30" />
             {timeline.map((step) => (
               <div
                 key={step.date}
                 className="relative flex flex-1 flex-col items-center text-center"
               >
-                {/* Dot */}
                 <div className="relative z-10 mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-leaf text-white text-lg shadow-md">
                   <span>{step.icon}</span>
                 </div>
@@ -88,6 +86,27 @@ export default function ThesisSection() {
                   {step.date}
                 </span>
                 <span className="font-sans text-mangrove text-sm font-medium">{step.label}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile timeline */}
+          <div className="relative flex flex-col gap-6 sm:hidden pl-6">
+            <div className="absolute left-5 top-2 bottom-2 w-px bg-leaf/30" />
+            {timeline.map((step) => (
+              <div key={step.date} className="flex items-start gap-4">
+                <div className="relative z-10 shrink-0 flex h-10 w-10 items-center justify-center rounded-full bg-leaf text-white text-lg shadow-md -ml-6">
+                  <span>{step.icon}</span>
+                </div>
+                <div className="pt-1.5">
+                  <span
+                    className="block font-sans text-earth text-xs font-semibold uppercase mb-0.5"
+                    style={{ letterSpacing: "0.06em" }}
+                  >
+                    {step.date}
+                  </span>
+                  <span className="font-sans text-mangrove text-sm font-medium">{step.label}</span>
+                </div>
               </div>
             ))}
           </div>

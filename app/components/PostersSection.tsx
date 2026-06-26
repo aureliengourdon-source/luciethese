@@ -71,7 +71,7 @@ function PosterCard({ poster }: { poster: typeof posters[0] }) {
   const [activeLevel, setActiveLevel] = useState<ReadLevel | null>(null)
 
   return (
-    <div className="flex flex-col rounded-xl bg-white p-7 shadow-md">
+    <div className="flex flex-col rounded-xl bg-white p-5 sm:p-7 shadow-md">
       <div className="mb-5">
         <DocumentIcon />
       </div>
