@@ -24,7 +24,7 @@ const timeline = [
 
 export default function ThesisSection() {
   return (
-    <section className="bg-sand py-24 px-6">
+    <section id="these" className="bg-sand py-24 px-6">
       <div className="mx-auto max-w-5xl">
         {/* Header */}
         <div className="mb-14 max-w-3xl">

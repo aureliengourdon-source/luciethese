@@ -45,6 +45,42 @@ export default function Hero() {
           <p className="font-serif italic text-white/70 text-xl sm:text-2xl">
             Carbone bleu et mangroves brésiliennes
           </p>
+
+          {/* Stat cards */}
+          <div className="flex flex-col sm:flex-row gap-4 mt-2">
+            {[
+              {
+                value: "10×",
+                label: "plus vite qu'une forêt terrestre pour capter le carbone",
+                delay: 0.2,
+              },
+              {
+                value: ">75%",
+                label: "du stock de carbone stocké sous terre",
+                delay: 0.3,
+              },
+              {
+                value: "Millénaires",
+                label: "durée de conservation du carbone dans les sols",
+                delay: 0.4,
+              },
+            ].map((stat) => (
+              <motion.div
+                key={stat.value}
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: stat.delay, ease: "easeOut" }}
+                className="flex flex-col gap-1 rounded-2xl border border-white/15 bg-white/15 backdrop-blur-md px-5 py-4 flex-1"
+              >
+                <span className="font-serif text-white text-2xl font-bold leading-none">
+                  {stat.value}
+                </span>
+                <span className="font-sans text-white/70 text-xs leading-snug">
+                  {stat.label}
+                </span>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
       </div>
 

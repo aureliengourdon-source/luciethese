@@ -38,7 +38,7 @@ function DocumentIcon() {
 
 export default function PostersSection() {
   return (
-    <section className="bg-mist py-24 px-6">
+    <section id="travaux" className="bg-mist py-24 px-6">
       <div className="mx-auto max-w-5xl">
         {/* Header */}
         <div className="mb-14">

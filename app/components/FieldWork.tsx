@@ -28,7 +28,7 @@ const photos = [
 
 export default function FieldWork() {
   return (
-    <section className="bg-mangrove py-24 px-6">
+    <section id="terrain" className="bg-mangrove py-24 px-6">
       <div className="mx-auto max-w-5xl">
         {/* Header */}
         <div className="mb-14">

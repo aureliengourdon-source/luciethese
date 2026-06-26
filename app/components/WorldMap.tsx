@@ -62,6 +62,7 @@ export default function WorldMap() {
 
   return (
     <section
+      id="carte"
       className="bg-ocean w-full py-20 px-4"
       style={{ color: "white" }}
     >

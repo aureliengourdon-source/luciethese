@@ -25,7 +25,7 @@ const anecdotes = [
 
 export default function LifeSection() {
   return (
-    <section className="bg-ocean py-24 px-6">
+    <section id="vie" className="bg-ocean py-24 px-6">
       <div className="mx-auto max-w-5xl">
         {/* Header row */}
         <div className="mb-14 flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
