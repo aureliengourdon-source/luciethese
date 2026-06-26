@@ -153,7 +153,7 @@ export default function FieldWork() {
             Sur le terrain
           </h2>
           <p className="font-serif italic text-white/60 mt-3 text-lg">
-            Pará, nord du Brésil — mangroves de Salinopolis et Marapanim
+            Amazonie, nord du Brésil — analyse d'échantillons prélevés à travers le littoral brésilien
           </p>
         </div>
 

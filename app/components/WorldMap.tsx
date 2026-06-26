@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef } from "react"
+import Image from "next/image"
 import { motion, useInView } from "framer-motion"
 import {
   ComposableMap,
@@ -31,12 +32,12 @@ const locations = [
       "École supérieure d'agriculture Luiz de Queiroz (ESALQ), Université de São Paulo. Analyses en écologie et biologie tropicale.",
   },
   {
-    name: "Pará — terrain",
+    name: "Pará — Amazonie",
     label: "Salinopolis · Marapanim",
     coordinates: [-47.5, -0.65] as [number, number],
     type: "brazil",
     description:
-      "Terrain de recherche sur les mangroves et forêts de restinga du littoral amazonien, état du Pará, nord du Brésil.",
+      "Collecte d'échantillons dans les mangroves du littoral amazonien (Pará, nord du Brésil). Objectif : comparer avec d'autres régions du littoral brésilien pour comprendre comment le contexte géomorphologique influence le stockage du carbone.",
   },
 ]
 
@@ -211,6 +212,33 @@ export default function WorldMap() {
             {locations.find((l) => l.name === tooltip)?.label}
           </div>
         )}
+      </motion.div>
+
+      {/* Brazil mangrove distribution map */}
+      <motion.div
+        className="max-w-4xl mx-auto mt-14 px-2"
+        initial={{ opacity: 0, y: 16 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}
+      >
+        <p
+          className="font-sans text-xs font-semibold text-white/40 uppercase mb-3 text-center"
+          style={{ letterSpacing: "0.08em" }}
+        >
+          Distribution des mangroves le long du littoral brésilien
+        </p>
+        <div className="relative w-full rounded-xl overflow-hidden border border-white/10" style={{ aspectRatio: "4/3" }}>
+          <Image
+            src="/carte-mangroves-bresil.jpeg"
+            alt="Carte climatique du Brésil montrant la distribution des mangroves (rouge) le long du littoral"
+            fill
+            className="object-contain"
+            sizes="(max-width: 768px) 100vw, 896px"
+          />
+        </div>
+        <p className="font-sans text-white/40 text-xs text-center mt-2">
+          En rouge : zones de mangroves. L'objectif est de couvrir des sites contrastés du nord au sud du littoral.
+        </p>
       </motion.div>
 
       {/* Location cards */}

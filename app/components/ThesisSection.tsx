@@ -12,7 +12,7 @@ const cards = [
   {
     emoji: "🔬",
     title: "La question de Lucie",
-    text: "Comment le carbone se lie-t-il aux particules minérales du sol des mangroves ? Lucie étudie le MAOC — le carbone organique associé aux minéraux — dans des sols prélevés au nord du Brésil. Comprendre ce mécanisme permet de mieux protéger ces réservoirs naturels de carbone.",
+    text: "On sait que les mangroves stockent du carbone — mais est-ce vraiment pérenne ? Contrairement aux écosystèmes terrestres, on connaît encore peu les mécanismes qui stabilisent ce carbone dans les sols côtiers. Lucie étudie le MAOC sur des échantillons prélevés à travers le littoral brésilien pour commencer à répondre.",
   },
 ]
 

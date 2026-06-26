@@ -46,14 +46,14 @@ const noviceBlocks: NoviceBlock[] = [
     badge: ">75 % du carbone stocké sous terre",
   },
   {
-    title: "Pourquoi c'est important ?",
-    text: "Ces forêts côtières sont des coffres-forts naturels pour le carbone. Si on les détruit, tout ce carbone retourne dans l'atmosphère et amplifie le changement climatique — comme ouvrir des milliers de coffres en même temps.",
-    note: "Menaces principales : urbanisation, agriculture, montée des eaux",
+    title: "Mais ce carbone reste-t-il vraiment là ?",
+    text: "Bonne question — et c'est justement ce qu'on ne sait pas encore bien. Pour les forêts terrestres, les mécanismes sont bien connus. Mais pour les mangroves et les autres écosystèmes côtiers, la science est encore jeune. Est-ce que ce carbone reste piégé des millénaires, ou peut-il repartir dans l'atmosphère si les conditions changent ? C'est une des grandes questions que Lucie contribue à éclairer.",
+    badge: "Lacune majeure : la permanence du carbone bleu reste à démontrer",
   },
   {
     title: "Où en est-elle ?",
-    text: "📚 Revue de littérature — Chapitre 1 terminé et présenté au symposium international SOM 2026 à São Paulo",
-    note: "Prochaines étapes : analyses en laboratoire sur les échantillons de Pará",
+    text: "📚 Revue de littérature — Chapitre 1 terminé et présenté au symposium international SOM 2026 à São Paulo. Elle analyse actuellement les échantillons déjà collectés dans les mangroves d'Amazonie.",
+    note: "Objectif : comparer des sites de différentes régions du littoral brésilien (nord → sud)",
     progress: true,
   },
 ]
@@ -64,6 +64,7 @@ const expertFindings: string[] = [
   "Les mangroves présentent la plus forte variabilité vs mudflats et marais salants",
   "Surreprésentation des études chinoises (>80 % des mesures)",
   "Manque de données sur les herbiers marins",
+  "Question ouverte : la séquestration du carbone est-elle vraiment pérenne dans ces sols ? Les mécanismes sont bien documentés pour les écosystèmes terrestres — bien moins pour les blue carbon.",
 ]
 
 const fadeWait = {
@@ -204,7 +205,7 @@ export default function ScienceSection() {
                             Mineral-Associated Organic Matter
                           </p>
                           <p className="font-sans text-xs text-earth/80 leading-relaxed">
-                            {"<53µm, densité <1,6 g/cm³, lié aux minéraux Fe/Mn/Al/argiles. Turnover de "}
+                            {"Densité >1,6 g/cm³, fractionné par taille <53µm. Lié aux minéraux Fe/Mn/Al/argiles. Turnover de "}
                             <strong>siècles à millénaires</strong>
                             {" — pool stable."}
                           </p>
@@ -221,7 +222,7 @@ export default function ScienceSection() {
                             Particulate Organic Matter
                           </p>
                           <p className="font-sans text-xs text-earth/80 leading-relaxed">
-                            {">53µm, densité >1,6 g/cm³, débris végétaux facilement décomposables. Turnover "}
+                            {"Densité <1,6 g/cm³, fractionné par taille >53µm. Débris végétaux facilement décomposables. Turnover "}
                             <strong>{"d'années à décennies"}</strong>
                             {" — pool dynamique."}
                           </p>
